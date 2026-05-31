@@ -1,0 +1,47 @@
+# Words In get: -
+- Repository (Repo) => Place where all data saved (مستودع) => code of / It includes all the history and branches
+- Branch (فرع) => It is a part in the repository where a part of the code is a feature, solution for bug, and so
+- Local Repo => Your own repository / Where all of your edits, version, history, branches saved in your own pc
+- Remote Repo => It is the repository of your project in the internet place like github, server of a company and so
+- Commit (Checkpoint) => it is a checkpoint of your code
+- Clone => make a cloning a repository either local or remote
+- Push => Upload local changes to remote repo 
+- Pull => you take changes from remote repo to your local repo
+- Pull Request => make a request to upload your changes from local to remote
+# Notes: -
+- Create a repository for every project
+- create a new branch for every feature / enhancement
+- No need to connect to remote repository when working
+- Anyone can push and pull depends on permissions
+# Start of coding (in terminal): -
+- cd PATH => enter to a specific path in the current folder (cd => change directory)
+- cd / => going pack to c
+- mkdir name => Make a new folder or working directory (mkdir => make directory)
+- git clone URL => cloning for a repository from a specific url
+- git status => give the state of the current working directory
+- git add PATH_FILE1 PATH_FILE2 .... => add file1, file2, ..... to the staging area
+- git add . / git add * => add all files in the working directory to the staging area
+- git reset head PATH_FILE1 PATH_FILE2 .... => take file1, file2, .... from the staging area to the working directory
+- git reset head . / git reset head * => take all files in the staging area to the working directory
+- git commit -m "Description message" => commit changes in the files in the staging area to the working directory "You can make commit more than one time"
+- git branch => you can know the branches of the current working directory
+- git remote -v => give you the remote repository URL
+- git push Remote_Repository_Name Branch_name => push all your committed changes to the remote repository
+- git pull Remote_Repository_Name => take all committed changes from the remote repo to the current working directory => (git fetch + git merge)
+- git config --list / git config -l => returns a list with all configurations of the user
+- git help config => open the documentations of git config
+- git config --global CONFIG_NAME => gives the value of the configurations name given
+- git config --global CONFIG_NAME CONFIG_VAL => set a value for the configuration name given
+- git config -l --show-origin => return configuration list with the origin of it
+- git config --global --unset CONFIG_NAME => set value of the configuration name to space or ""
+- git config --global --edit => Open the file of configuration with editor
+# Public Key
+- ssh-keygen -t rsa -b 4096 -C "mohammad915657@gmail.com" (secure Shell-Key generator -type RSA -bytes 4096 ) => create a new public key from type of ssh rsa
+- cat PATH => return the content of any file in the given path
+- ssh -T git@github.com => test the public key 
+# Create a repo from existing project
+- git init => initialize new empty repo in current directory
+- git remote add origin Remote_Repository_URL => add the remote repo on the local repo origin
+- git push -u origin main => It is the simple push command but -u here means to make pull first then push to avoid any conflicts between the remote repo and local repo
+- git remote set-url origin NEW_URL => to set a new url for the remote repo
+- --force: force specific command
